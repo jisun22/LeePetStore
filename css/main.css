@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/* 초기화 */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Nanum+Gothic+Coding&family=Patrick+Hand&display=swap');
+
+
+/* 비디오 */
+
+header > .main_video {
+    position: relative;
+    top: 0;
+}
+
+header > .main_video > video {
+    width: 100%;
+}
+
+header > .main_video > .typing-txt {  
+    display: inline-block; 
+    animation-name: cursor; 
+    animation-duration: 0.3s; 
+    animation-iteration-count: infinite;
+    position: absolute;
+    right: 40px;
+    top: 450px;
+    font-family: 'Patrick Hand', cursive;
+    color: #FFFFFF;
+    font-size: 144px;
+    line-height: 130px; 
+} 
+@keyframes cursor{ 
+    0%{border-right: 1px solid #fff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #fff} 
+        }
+
+/* 검색창 */
+/* .search_table{
+    position: absolute;
+    background: #FFFFFF;
+    border: 6px solid #D88E20;
+    width: 600px;
+    height: 80px;
+    text-align: center;
+    background: #ffffff;
+    opacity: 60;
+}
+
+.search_container tr td input{
+    width: 763px;
+    height: 79px;
+}
+
+#search_sec .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+#search_sec .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+   
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+} */
+
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 800px;
+    top: 0;
+}
+
+.swiper-head .swiper-slide.slide1 {
+    background: url(../images/paris.jpg);
+    background-size: cover;
+    background-position:center;
+}
+
+.swiper-head .swiper-slide.slide2 {
+    background: url(../images/paris2.jpg);
+    background-size: cover;
+    background-position:center;
+}
+
+
+#header .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+/*============================================================================*/
+
+
+
+/*============================================================================*/
+/* PC (해상도 1024px)*/
+
+@media all and (min-width:1024px) and (max-width:1480px) {
+    header > .main_video > .typing-txt{
+        position: absolute;
+        right: 40px;
+        top: 120px;
+        font-family: 'Patrick Hand', cursive;
+        color: #FFFFFF;
+        font-size: 90px;
+        line-height: 100px; 
+    }
+
+    #pet_so_sec > .petsoshic > img {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .review_frame {
+        height: 1700px;
+    }
+
+    .swiper-container {
+        width: 1500px;
+        height: 600px;
+        top: 0;
+    }
+    
+}
+
+/*============================================================================*/
+
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+
+    header > .main_video > .typing-txt{
+        position: absolute;
+        top: 140px;
+        font-size: 70px;
+        right: 40px;
+        font-family: 'Patrick Hand', cursive;
+        color: #FFFFFF;
+        line-height: 80px;
+    }
+
+    header > .main_video{
+        top: 100px;
+        height: 290px;
+    }
+
+    #pet_so_sec > .petsoshic > img {
+        display: none;
+    }
+
+    #pet_so_sec .petsoshic_ex{
+        display: none;
+    }
+    .swiper-container {
+        display: none;
+    }
+}
+
+
+/*============================================================================*/
+
+
+
+/* 모바일 가로, 모바일 세로 (해상도 ~ 767px)*/
+@media all and (max-width:767px) {
+    .main_video video{
+        position: relative;
+        top: 170px;
+    }
+    
+    header > .main_video > .typing-txt{
+        position:absolute;
+        top: 190px;
+        font-size: 30px;
+        right: 40px;
+        font-family: 'Patrick Hand', cursive;
+        color: #FFFFFF;
+        line-height: 30px; 
+    }
+
+
+    .swiper-container {
+        display: none;
+    }
+    
+}

@@ -1,0 +1,578 @@
+                                               @charset "UTF-8";
+/* 초기화 */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Nanum+Gothic+Coding&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Nanum+Gothic+Coding&family=Patrick+Hand&family=Source+Sans+Pro&display=swap');
+
+
+/* 공통 */
+
+* {
+    margin: 0; padding: 0;
+}
+a { text-decoration: none !important; color: black;}
+img { border: 0; }
+ul { list-style: none; }
+
+html{font-size: 20px}
+
+body{
+    margin: 0;
+    font-family: 'PT Sans Narrow';
+    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.hidden{
+    display: none;
+}
+
+/* 헤더 꾸미기 */
+
+/* 메인헤더 / 드롭다운 */
+.header {
+    height: 120px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999999;
+    background-color:rgba(255, 255, 255, 0.529);
+    -webkit-transition-duration:0.4s;
+    -webkit-transition-timing-function:ease;
+    transition-duration:0.4s;
+    transition-timing-function:ease;
+}
+
+.down {
+    background-color:rgba(255, 255, 255, 0.695);
+    -webkit-transition-duration:0.4s;
+    -webkit-transition-timing-function:ease;
+    transition-duration:0.4s;
+    transition-timing-function:ease;
+}
+
+
+/*헤더 로고*/
+.header  .top_nav  .logo img{
+    position: absolute;
+    float: left;
+    left: 50px;
+    width: 200px;
+    top: 20px;
+}
+
+/*헤더 메뉴*/
+
+.header ul {
+    overflow: hidden;
+}
+
+
+.header > .top_nav {
+    width: 700px;
+    margin: 0 auto;
+} 
+
+.header > .top_nav > div {
+    float: left;
+}
+
+.header > .bottom_nav {
+    position: relative;
+}
+
+.header > .bottom_nav > ul {
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+
+
+.header_menu1 li{
+    float: left;
+    /* padding-left: 50px; */
+    padding: 55px 80px 70px 30px;
+    font-weight: bolder;
+
+}
+
+.header_menu1 li a:hover{
+    border-bottom: solid 3px #f0c436;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    
+}
+
+.header_menu2{
+    font-size: 15px;
+}
+
+.header_menu2 li{
+   display: flex;
+   padding: 80px 50px 10px 10px;
+   font-weight: bold;
+}
+
+.header_menu2 li a:hover{
+    color: #f0c436;
+}
+
+
+
+/*모바일 diplay none*/
+
+.mobile_nav{
+    display: none;
+}
+
+
+.mobile_menu{
+    position: absolute;
+    display: none;  
+}
+
+
+.toggle_btn {
+    display: none;
+}
+
+
+
+/* 푸터 꾸미기   */
+
+#footer{
+    position: relative;
+    background-color: rgba(224, 175, 61, 0.749);
+    height: 200px;
+    overflow: hidden;
+}
+
+#footer .footer_name img{
+    position: absolute;
+    float: left;
+    left: 10px;
+}
+
+.footer_text li a{
+    position: relative;
+    float: left;
+    padding: 90px 20px 20px 0;
+    left: 45px;
+    top: 30px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+#footer .footer_text li a:hover{
+    color: black;
+}
+
+#commonFooter .address p{
+    position: relative;
+    font-size: 12px;
+    float: left;
+    left: 100px;
+    top: 63px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+#commonFooter .help{
+    position: relative;
+    font-size: 12px;
+    float: left;
+    left: 230px;
+    bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/*모바일 푸터*/
+
+#footer .mobile_footer a i{
+    position: absolute;
+    display: none;
+}
+
+#footer .mobile_footer img{ 
+    position: absolute;
+    display: none;
+}
+
+#mobileFooter .help p{
+    display: none;
+}
+#mobileFooter .address p{
+    display: none;
+}
+
+/*============================================================================*/
+
+
+/* PC (해상도 1024px)*/
+
+
+@media all and (min-width:1024px) and (max-width:1200px) {
+
+    .header_menu1{
+        position: relative;
+        left: 120px;
+    }
+
+    .header_menu1 li{
+        padding: 50px 10px 10px 40px;
+    }
+    .header_menu2{
+        font-size: 12px;
+    }
+    
+    .header .main_menu .header_menu1 li a:hover{
+        border-bottom: solid 3px #f0c436;  
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+        
+    }
+
+    .header .top_nav .logo img{
+        position: absolute;
+        float: left;
+        left: 0;
+        width: 200px;
+    } 
+
+    .menu1_btn a{
+        position: absolute;
+        display: none;  
+    }
+
+    #mobileFooter .help p{
+        display: none;
+    }
+    #mobileFooter .address p{
+        display: none;
+    }
+
+    .toggle_btn {
+    display: none;
+     }
+
+}
+
+/*============================================================================*/
+
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+    /* .header .top_nav .logo img{
+        position: absolute;
+        float: left;
+        left: 0;
+        width: 150px;
+    } 
+
+    .header > .top_nav {
+        padding-top: 25px;
+        overflow: hidden;
+        width: 500px;
+        margin: 0 auto;
+    } 
+
+    .header ul > li {
+        float: left;
+        margin-right: 10px;
+        padding: 0 5px 0 0;
+    }
+
+    .header > .top_nav > div {
+        float: right;
+    }
+    
+    .menu1_btn a{
+        position: absolute;
+        display: none;  
+    } */
+
+    /*---------header-----------*/
+    
+
+    .header_menu1{
+        display: none;
+    }
+        
+    .header_menu2{
+        display: none;
+    }
+
+    .header_menu2 li{
+        display: none;
+    }
+
+    .header .top_nav .logo img{
+        position: absolute;
+        float: left;
+        left: 0;
+    }
+
+    .toggle_btn{
+        position: relative;
+        top: 20px;
+
+        display: block;
+        float: right;
+        right: 20px;
+        
+    }
+
+    .toggle_btn i{ 
+        top: 20px;
+        font-weight: bolder;
+        font-size: 30px;
+        color: rgb(255, 212, 41);
+    }
+
+
+    /*-------------------------------------------*/
+
+      .mobile_nav{
+        display: block;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mobile_menu {
+        z-index: 1;
+        position: relative;
+        top: 40px;
+        display: block;
+        width: 100%;
+        height: 70vh;
+        background-color: #fff;
+        display: none;
+      }
+    
+      .mobile_menu > li {
+        flex-direction: column;
+        font-size: 25px;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .mobile_menu > li:hover {
+        background-color: rgb(245, 210, 147);
+      }
+
+      .mobile_menu i{
+        color:#000000;
+        align-items: center;
+        margin: 0 auto;
+      }
+
+      .mobile_menu i:hover {
+        color: rgb(245, 210, 147);
+      }
+    /*---------footer-----------*/
+
+    #footer{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        background: rgb(255, 255, 255);
+        display: flex;
+        margin-top: 250px;
+    }
+    #footer .footer_name{
+        display: none;
+    }
+    #footer .footer_text{
+        display: none;
+    }
+    #footer .sns{
+        display: none;
+    }
+    
+    #commonFooter .help p{
+        display: none;
+    }
+    #commonFooter .address p{
+        display: none;
+    }
+
+    #mobileFooter .help p{
+        display: block;
+        position: relative;
+        float: left;
+        left: 300px;
+        bottom: 65px;
+        color: #f0c436;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    #mobileFooter .address p{
+        display: block;
+        position: relative;
+        float: left;
+        left: 10px;
+        top: 20px;
+        color: #f0c436;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+}
+
+/*============================================================================*/
+
+
+
+/* 모바일 가로, 모바일 세로 (해상도 ~ 767px)*/
+@media all and (max-width:767px) {
+    .header_menu1{
+        display: none;
+    }
+        
+    .header_menu2 a{
+        display: none;
+    }
+
+    .header_menu2 li{
+        display: none;
+    }
+
+    .header .top_nav .logo img{
+        position: absolute;
+        float: left;
+        left: 0;
+    }
+
+
+    .toggle_btn{
+        position: relative;
+        display: block;
+        float: right;
+        top: 35px;
+        right: 20px;
+        
+    }
+
+    .toggle_btn i{ 
+        font-weight: bolder;
+        font-size: 30px;
+        color: rgb(255, 212, 41);
+    }
+
+
+    /*-------------------------------------------*/
+
+      .mobile_nav{
+        display: block;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mobile_menu {
+        position: relative;
+        top: 100px;
+        display: block;
+        width: 100%;
+        height: 60vh;
+        background-color: #fff;
+        display: none;
+      }
+    
+      .mobile_menu > li {
+        flex-direction: column;
+        font-size: 25px;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .mobile_menu > li:hover {
+        background-color: rgb(245, 210, 147);
+      }
+
+      .mobile_menu i{
+        color:#000000;
+        align-items: center;
+        margin: 0 auto;
+      }
+
+      .mobile_menu i:hover {
+        color: rgb(245, 210, 147);
+      }
+
+
+
+/* 푸터 */
+@media all and (max-width:767px) {
+    #footer{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        background: rgb(255, 255, 255);
+        display: flex;
+        margin-top: 250px;
+    }
+    #footer .footer_name{
+        display: none;
+    }
+    #footer .footer_text{
+        display: none;
+    }
+    #footer .sns{
+        display: none;
+    }
+    
+    #commonFooter .help p{
+        display: none;
+    }
+    #commonFooter .address p{
+        display: none;
+    }
+
+    #mobileFooter .help p{
+        display: block;
+        position: relative;
+        float: left;
+        left: 260px;
+        bottom: 65px;
+        color: #f0c436;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    #mobileFooter .address p{
+        display: block;
+        position: relative;
+        float: left;
+        left: 10px;
+        top: 20px;
+        color: #f0c436;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    #footer .select{
+        display: none;
+    }
+    #footer .mobile_footer{
+        position: relative;
+        text-align: center;
+    }
+
+    #footer .mobile_footer a i{
+        text-align: center;
+        right: 2px;
+        font-size: 20px;
+        padding: 10px 40px 0px 20px;
+    }
+}
+
+}
